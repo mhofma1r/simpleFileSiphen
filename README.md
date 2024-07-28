@@ -44,46 +44,39 @@ The fileSiphen.sh script takes a file as an input, prints the first line of the 
 
 Suppose input.txt contains the following lines:
 
-arduino
 
-First line
-Second line
-Third line
+    First line
+    Second line
+    Third line
 
 After running ./fileSiphen.sh input.txt, the output will be:
 
-arduino
 
-First line
+    First line
 
 And input.txt will be modified to:
 
-arduino
 
-Second line
-Third line
+    Second line
+    Third line
 
 ## Script Details
 
 Here is the content of the fileSiphen.sh script:
 
-´´´bash
-
-
-#!/bin/bash
-
-# Check if a file name is provided as an argument
-if [ -z "$1" ]; then
-    echo "Usage: $0 <filename>"
-    exit 1
-fi
-
-input_file="$1"
-
-# Print the first line
-first_line=$(head -n 1 "$input_file")
-echo "$first_line"
-
-# Remove the first line
-sed -i '1d' "$input_file"
-´´´
+    #!/bin/bash
+    
+    # Check if a file name is provided as an argument
+    if [ -z "$1" ]; then
+        echo "Usage: $0 <filename>"
+        exit 1
+    fi
+    
+    input_file="$1"
+    
+    # Print the first line
+    first_line=$(head -n 1 "$input_file")
+    echo "$first_line"
+    
+    # Remove the first line
+    sed -i '1d' "$input_file"
