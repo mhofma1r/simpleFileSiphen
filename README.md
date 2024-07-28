@@ -10,7 +10,6 @@ These instructions will help you get a copy of the project up and running on you
 
 Make sure you have the following installed on your system:
 
-    Bash
     sed command-line utility
 
 ## Installation
